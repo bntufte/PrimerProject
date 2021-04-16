@@ -18,6 +18,7 @@ public class Game {
 
   public Game() {
     inputs = getInputList();
+    outputToConsole(inputs.toString());
   }
 
   /** Starts the game */
@@ -44,7 +45,7 @@ public class Game {
     try (Scanner scanner =
         new Scanner(
             new File(
-                "C:\\Users\\mattd\\IdeaProjects\\revature-practice\\PrimerProject\\src\\main\\resources\\inputs.txt"))) {
+                ".\\src\\main\\resources\\inputs.txt"))) {
       return Arrays.asList(scanner.nextLine().split(","));
     } catch (Exception e) {
       outputToConsole("No input file found!\n" + e.getMessage());
