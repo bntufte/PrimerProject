@@ -9,6 +9,8 @@ public class Game {
     private int winCount;
     private int lostCount;
 
+    public Game(){}
+
     public void startGame(){
         Scanner scanner = new Scanner(System.in);
         do {
@@ -63,9 +65,9 @@ public class Game {
         outputToConsole(String.format("%s encounters a %s. It looks like %s. Prepare to battle!", player.name, creature.name, creature.description));
         do {
             //TODO: Call player to throw a sign
-            player.sign = "scissors";
+            player.sign = "S";
             //TODO: Call creature to throw a sign
-            creature.sign = "paper";
+            creature.sign = "P";
             try {
                 boolean result = evaluateRound(player.sign, creature.sign);
                 if (result) {
