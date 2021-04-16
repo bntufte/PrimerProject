@@ -1,5 +1,3 @@
 package com.revature;
 
-public class shell3 {
-
-}
+public class shell3 {}
