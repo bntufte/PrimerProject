@@ -75,6 +75,7 @@ public class Game {
                 }
                 roundsTotal += 1;
                 //TODO: Change generic Exception to TIE exception
+                //TODO: Handle an exception when player inputs a non r, p, s
             } catch (Exception e) {
                 outputToConsole("You and the creature resulted in a tie. A new round will start. Enter any key to continue.");
                 Scanner scanner = new Scanner(System.in);
@@ -99,8 +100,8 @@ public class Game {
             case "S":
                 return isPlayerWon(creatureSign, "P", "R");
             default:
-                //TODO: handle input other than r, p, and s
-                return false;
+                //TODO: Incorrect input exception
+                throw new Exception();
         }
     }
 
